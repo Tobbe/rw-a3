@@ -1,6 +1,3 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui'
-
 export const QUERY = gql`
   query PRODUCTS_PAGINATED {
     allProducts: simpleProducts(
