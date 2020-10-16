@@ -1,10 +1,6 @@
 export const QUERY = gql`
   query PRODUCTS_PAGINATED {
-    allProducts: simpleProducts(
-      page: 1
-      limit: 25
-      filterSkus: null
-    ) {
+    simpleProducts {
       simpleProducts {
         sku
         name

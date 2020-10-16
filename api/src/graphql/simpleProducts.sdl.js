@@ -29,7 +29,7 @@ export const schema = gql`
   }
 
   type Query {
-    simpleProducts(page: Int, limit: Int, filterSkus: [String]): SimpleProductSet
+    simpleProducts: SimpleProductSet
     simpleProduct(sku: String!): SimpleProduct!
   }
 `
