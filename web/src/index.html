@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://app.snipcart.com" />
+    <link rel="preconnect" href="https://cdn.snipcart.com" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.snipcart.com/themes/v3.0.23/default/snipcart.css"
+    />
+  </head>
+  <body>
+    <div id="redwood-app"></div>
+
+    <div
+      hidden
+      id="snipcart"
+      data-api-key="MzgxYmYxY2UtMzI5Ny00MzQ1LTllNTQtOWVmZjlhYWU3OTk4NjM3MjczODM5MjAzODIzODQ2"
+      data-currency="sek"
+    ></div>
+    <script src="https://cdn.snipcart.com/themes/v3.0.23/default/snipcart.js"></script>
+    <script>
+      document.addEventListener('snipcart.ready', () => {
+        window.Snipcart.ready.then(() => {
+          window.Snipcart.api.session.setCurrency('sek');
+          window.Snipcart.api.session.setLanguage('sv');
+        });
+      });
+    </script>
+  </body>
+</html>

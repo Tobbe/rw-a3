@@ -1,0 +1,33 @@
+datasource DS {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = env("BINARY_TARGET")
+}
+
+model SimpleProduct {
+  sku           String    @id
+  name          String
+  published     Int?
+  featured      Int?
+  visibility    String?
+  short_desc    String
+  description   String? // TODO: rename to long_desc
+  sale_start    DateTime?
+  sale_end      DateTime?
+  tax_status    String
+  tax_class     String
+  weight        Int?
+  length        Int?
+  width         Int?
+  height        Int?
+  sale_price    Float?
+  regular_price Float
+  stock         Int
+  images        String?
+  ean           String?
+  manufacturer  String?
+}
